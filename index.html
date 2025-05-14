@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Achro Thar – The White Desert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+
+    <!-- Navbar Start -->
+    <nav class="bg-yellow-900 text-white px-4 py-3 sticky top-0 z-50">
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-xl font-bold">Achro Thar</a>
+        <!-- Hamburger Menu (Mobile) -->
+        <button id="hamburger" class="md:hidden">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <!-- Desktop Menu -->
+        <div id="menu" class="hidden md:flex items-center space-x-6">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#places" class="nav-link">Places</a>
+          <a href="#gallery" class="nav-link">Gallery</a>
+          <a href="#contact" class="nav-link">Contact Us</a>
+          <!-- Language Switcher -->
+          <div class="language-switcher">
+            <select id="languageSelect" onchange="changeLanguage(this.value)" class="bg-yellow-900 text-white border border-yellow-800 rounded px-3 py-1 cursor-pointer">
+              <option value="en">English</option>
+              <option value="ur">اردو</option>
+              <option value="sd">سنڌي</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden mt-4">
+        <a href="#home" class="block py-2 text-center nav-link active">Home</a>
+        <a href="#about" class="block py-2 text-center nav-link">About</a>
+        <a href="#places" class="block py-2 text-center nav-link">Places</a>
+        <a href="#gallery" class="block py-2 text-center nav-link">Gallery</a>
+        <a href="#contact" class="block py-2 text-center nav-link">Contact Us</a>
+        <!-- Mobile Language Switcher -->
+        <div class="language-switcher mt-4">
+          <select id="languageSelectMobile" class="w-full bg-yellow-900 text-white border border-yellow-800 rounded px-2 py-1">
+            <option value="en">English</option>
+            <option value="ur">اردو</option>
+            <option value="sd">سنڌي</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Add this right after your navbar -->
+    <div id="google_translate_element"></div>
+
+    <!-- Home Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center text-center scroll-mt-20">
+      <!-- Blurred Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://scontent.fkhi4-4.fna.fbcdn.net/v/t39.30808-6/477762396_943852127895771_1725062277090704975_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHm5xLuKcFOmuYurVKGNaUg8kPWMKvLI0ryQ9Ywq8sjSjoKgcWbw5RkIxQABD1sjdDvhpT-WBBOuPO3NQqWC7a7&_nc_ohc=ZEbsF3vYgXIQ7kNvwEpc_5-&_nc_oc=Adkh_137Q-fZQkvj10xALpbYcrUk2l-Ccm-2Jt9Hs9HWJYj_VypaBnDU4bS3bwngz7o&_nc_zt=23&_nc_ht=scontent.fkhi4-4.fna&_nc_gid=GO0GTh8sZMuHxh5rsOd3vQ&oh=00_AfIQY6MwbaEvBlQtP-OaPlU1NqgJOn6l3PJm26Lb24FfPw&oe=682775C3" alt="Desert Background" class="w-full h-full object-cover filter blur-sm" />
+      </div>
+      <!-- Content -->
+      <div class="relative z-10 bg-black bg-opacity-50 p-8 rounded-lg">
+        <h1 class="text-5xl font-bold text-white">Welcome to Achro Thar</h1>
+        <p class="mt-4 text-xl text-white">Explore the beauty of Pakistan's hidden white desert</p>
+        <a href="#about" class="mt-6 inline-block bg-yellow-700 text-white px-6 py-2 rounded-lg">Plan Your Visit</a>
+        
+        <!-- Facebook Follow Section -->
+        <div class="mt-8">
+          <a href="https://web.facebook.com/profile.php?id=100068129763207" target="_blank" class="inline-flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors duration-300">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+            </svg>
+            <span>Follow us on Facebook</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-6 md:px-20 bg-white scroll-mt-20">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8 text-center">About Achro Thar</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Text Content -->
+          <div>
+            <p class="text-lg leading-relaxed mb-6">
+              Achro Thar, also known as the White Desert, is one of Pakistan's most unique and untouched natural wonders. Located in the Sindh province, between the districts of Sanghar and Khairpur, this mesmerizing white sand desert is home to rare landscapes, rich culture, and tranquil beauty that remains largely unexplored.
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+              What sets Achro Thar apart is not only its stunning white dunes but also its beautiful lakes, such as the Salt Lake and Botar Lake, which add a surreal charm to the region. These natural water bodies offer peaceful views and a refreshing contrast to the desert environment.
+            </p>
+            <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+            <p class="text-lg leading-relaxed mb-6">
+              Our goal is to showcase the real beauty of Achro Thar to the world – its scenery, its people, and its cultural depth. Through this platform, we aim to:
+            </p>
+            <ul class="list-disc pl-6 mb-6">
+              <li>Promote sustainable tourism in Achro Thar</li>
+              <li>Share detailed insights about its landscapes, especially Salt Lake and Botar Lake</li>
+              <li>Highlight the local lifestyle, traditions, and hospitality</li>
+              <li>Encourage eco-friendly exploration and support for local communities</li>
+            </ul>
+            <p class="text-lg leading-relaxed">
+              Whether you're a traveler, a nature lover, or a cultural explorer – Achro Thar promises an unforgettable experience. Let us guide you through the hidden gems of Pakistan's White Desert.
+            </p>
+          </div>
+          <!-- Image -->
+          <div class="flex items-center justify-center">
+            <img src="https://scontent.fkhi4-3.fna.fbcdn.net/v/t39.30808-6/469645261_1604971086784312_2551957374553929224_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGB51DKnbqhQGQ49wVGih-SbkySKf8gAgFuTJIp_yACAajwyxDYMrH_1mOyzdjsybYGK5QVRzr2o2WyOTvqUuDb&_nc_ohc=qhZBFMMXByQQ7kNvwFLosoZ&_nc_oc=AdlfI0qLw7gmEMYNpZGfzOYVBYXfTWbu5B-h3JeUAZ2vkR6KPDbte4uS6DBuY2MHJjtmC6hi0_4vaFsp_UKA61HN&_nc_zt=23&_nc_ht=scontent.fkhi4-3.fna&_nc_gid=qeNEYwi0aAKi5d69x2JbNA&oh=00_AfLGGm_OEfhvmHaO4G35YObi2xGMNAe7L6W60pAOmp6SSQ&oe=6828C9C9" alt="Achro Thar Landscape" class="rounded-lg shadow-lg" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Places to Visit -->
+    <section id="places" class="py-16 px-6 md:px-20 bg-gray-100 scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-8">Top Places to Visit</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover-effect">
+          <img src="https://scontent.fkhi4-2.fna.fbcdn.net/v/t39.30808-6/470214051_1607612276520193_1075345331927489690_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHkWmyyPou8bSJ1EaF0bGypVyVhOmklbVVXJWE6aSVtVTMtGrDctg12MlKriq6ueTEh0W9l8vuLRr_1gg2jrQMJ&_nc_ohc=t9_MbeGj--MQ7kNvwE6vZTz&_nc_oc=AdlbiiYXblO7q6QG0E5DEZSjhnxmmIDlXUnSvWPdgSJneOIvK7LOhvgc8w2Sa44_m80&_nc_zt=23&_nc_ht=scontent.fkhi4-2.fna&_nc_gid=7rQlblv2j3zBGlCTNUETZg&oh=00_AfInQkxHNwWwJDzIjsFewzK6mK-0S_0OMpxdHj3aMcBnug&oe=6827A045" alt="Desert View" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Achro Thar -- White Desert</h3>
+            <p class="mt-2 text-sm">Breathtaking natural sand formations spread across miles.</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover-effect">
+          <img src="https://scontent.fkhi4-3.fna.fbcdn.net/v/t39.30808-6/469844082_1604973113450776_930642016722215011_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEzkITOvPsW2o7pj3nr41VGBcy2w97O1nUFzLbD3s7WdVXoDQJg3ZydZQFWzVe9On95XFcILZuxwJX5vbPH2flH&_nc_ohc=L8pNxDLutwgQ7kNvwF5F3H4&_nc_oc=AdnEQua1asywcrnwyLDyYlSLJIniFzj2MZi-LMG9FqrBEMGV-CWSzX3Jeebf72uVID4&_nc_zt=23&_nc_ht=scontent.fkhi4-3.fna&_nc_gid=yM4oHw1bSr_OOHV9RVF-VQ&oh=00_AfJiVhcfs5gIyoI3hp_9ZaCcsQIklI0Ds9ajvJ6v-qsMVA&oe=682790FB" alt="Oasis" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Botar Lake</h3>
+            <p class="mt-2 text-sm">Hidden water spots in the heart of the desert.</p>
+          </div>
+        </div>
+        <div class="bg-white shadow-md rounded-lg overflow-hidden hover-effect">
+          <img src="https://scontent.fkhi4-4.fna.fbcdn.net/v/t1.6435-9/136417949_761177814496981_3693946590379093337_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeEHu33KO2WJ1nyR04PoO1tHlSKSKum2yK6VIpIq6bbIriT7fv1l4fdXUiGekEc_E4ekDi6viOz_-4Qalf1X_iFD&_nc_ohc=ghkFsZSNAKsQ7kNvwFV9yso&_nc_oc=AdlmchX-M9kQpQ0muD4RpF7FtbnQYYZGi-dXEjrIDrzLGdE3dCfJLbxTLfsbpW-OL6s&_nc_zt=23&_nc_ht=scontent.fkhi4-4.fna&_nc_gid=h66tVUnjIhkv97KwTLnjCg&oh=00_AfKslfFhcw9DJcIX6KIz8GLTRt40coQkDlPfgv0niXiMnA&oe=68492D51" alt="Village Life" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Salt Lake</h3>
+            <p class="mt-2 text-sm">Salt Lake in Achro Thar is a breathtaking natural wonder.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 px-6 md:px-20 bg-white scroll-mt-20">
+      <h2 class="text-3xl font-bold mb-8">Gallery</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="hover-effect rounded-lg overflow-hidden">
+          <img src="https://scontent.fkhi4-3.fna.fbcdn.net/v/t39.30808-6/469828758_1604969696784451_167686071368890806_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHraiUVRXv0MscM8UFQ6QDM3NoYzDH9vNbc2hjMMf281lAr2sGXIiz6NJBxatc4Q40JWpcwJ_3kaqrZHaUkZkap&_nc_ohc=wfi90ru-ywMQ7kNvwEryAFd&_nc_oc=AdnCynwI38PNS6hU4BcUDX-ia_vemu5wu7ffjf4Gxdn39k_kYalykcp6870gGa3Z3mM3u5nMJoL5EpC8WsBsgQ1L&_nc_zt=23&_nc_ht=scontent.fkhi4-3.fna&_nc_gid=hVoI4_c90-Qv6XaC4Job3Q&oh=00_AfK5iuv6GDDVcPS0usXP79ZxKnLnbDkOWZQNfuD2RS8EVA&oe=6828BF6C" class="w-full h-40 object-cover" />
+        </div>
+        <div class="hover-effect rounded-lg overflow-hidden">
+          <img src="https://scontent.fkhi4-2.fna.fbcdn.net/v/t39.30808-6/469999154_1607007026580718_8692838032647509557_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeE3CQ5ZTqvLaPchRvO6e_zIEx7ZlxB4OGITHtmXEHg4YjF-a-v50u-ngfk7sa44VrRslG8qkVfAuODFtgEJNAJx&_nc_ohc=G4gpm1YbRXUQ7kNvwGz5f3q&_nc_oc=Adk7uMQGVxCQ42s_if9tEOp9pPLMlNaZ2ga7sS4uO9-tU94doRWv9PMoNNFQFMivRejrEL94z5YM2TS5AmZvzKiw&_nc_zt=23&_nc_ht=scontent.fkhi4-2.fna&_nc_gid=S_YbkZoUfXHSMh35NfJoIQ&oh=00_AfIVKOPf-Qa3RNuvsFaEuswju53_OpKlFQdP1fzAhNoLLg&oe=6828CCA8" class="w-full h-40 object-cover" />
+        </div>
+        <div class="hover-effect rounded-lg overflow-hidden">
+          <img src="https://scontent.fkhi4-3.fna.fbcdn.net/v/t1.6435-9/117817359_665026014112162_6682615635691973701_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH7QIsKwZphL08f6TMZtoCKM_7xhv8HMl8z_vGG_wcyX3qkOS4WvK5bTl311eicJq9xDTiPLJMh8m93sJbSX3zj&_nc_ohc=0OmeqHJe6NcQ7kNvwFC1LOy&_nc_oc=Adm_ZHE8GfQAgTbNT4qarcDewx73xx7TTkZNkDwU8J1foCJLbWMdcLbYDxWkaVmp5BXo_7a3PEIJGc0Fpm94UPFk&_nc_zt=23&_nc_ht=scontent.fkhi4-3.fna&_nc_gid=b0MZc-eN-bQgiPqquMotKA&oh=00_AfJx103qOnAq1z4Cdz4gx3qIODAaqQU0y0unkKcgjiStug&oe=684A4C65" class="w-full h-40 object-cover" />
+        </div>
+        <div class="hover-effect rounded-lg overflow-hidden">
+          <img src="https://scontent.fkhi4-2.fna.fbcdn.net/v/t39.30808-6/469829015_1604967916784629_1443649132369078025_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeH9yBnHWOJzRWiZd4UQMZl8EkTWNAz6TSISRNY0DPpNIvdzowOJZozaqyGp26aGQAecNVmOk9B5Tz02WFJolsYI&_nc_ohc=g1Mn5l5ThOcQ7kNvwEGEaA3&_nc_oc=AdmpDSWCgFB_depVXdxKQqHOFemyeKzvIYPd19ezElliTqzZYH6SQ-wkC6ihjgSk7BfCrECUcrb5QURy__MKSkT8&_nc_zt=23&_nc_ht=scontent.fkhi4-2.fna&_nc_gid=pNiNl4_RXtT2ET-7R1bRrA&oh=00_AfIPGGZhZBu08eOwH09jJz4DnjwI3pl1yF-gZAzwzrhasA&oe=6828C356" class="w-full h-40 object-cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="relative py-16 px-6 md:px-20 scroll-mt-20">
+      <!-- Blurred Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="https://scontent.fkhi4-3.fna.fbcdn.net/v/t39.30808-6/469666081_1604969670117787_3076527922514088233_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeF8Zk6DhCifNMogYuMDEUw8cK9yXYFXf01wr3JdgVd_TZRlzwc0uV66hNoBCSrb2QY0uJ3qq1dXyAcPc2f_xLI8&_nc_ohc=AiLQpgvQeb0Q7kNvwGuJR4H&_nc_oc=AdmYlprtEbhbpMtOOYzjb_HisD7bKD7CaHJn31AIyYZaL7c-qe5P-Bf_tHpMRR5kMUo&_nc_zt=23&_nc_ht=scontent.fkhi4-3.fna&_nc_gid=Nw47IHCg3BJPDaeOqoRP9Q&oh=00_AfJr6uxucTvbBSMboSSHdIygGAHbOwzQK-_oDOnV4gg7WQ&oe=68278030" alt="Desert Background" class="w-full h-full object-cover filter blur-sm" />
+      </div>
+      <!-- Content -->
+      <div class="relative z-10 max-w-md mx-auto bg-white bg-opacity-90 rounded-lg shadow-lg p-6">
+        <h2 class="text-3xl font-bold mb-8 text-center">Contact Us</h2>
+        <form id="contact-form" class="space-y-4">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+            <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500" />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500" />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-yellow-500 focus:border-yellow-500"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-yellow-700 text-white py-2 px-4 rounded-md hover:bg-yellow-800 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-yellow-900 text-white py-8 text-center">
+      <div class="container mx-auto px-4">
+        <p class="text-lg mb-4">Achro Thar – Discover the Hidden Jewel of Pakistan</p>
+        <div class="border-t border-yellow-800 pt-4 mt-4">
+          <p class="text-sm">Developed by: Muhammad Sami Kaim Khani</p>
+          <p class="text-sm mt-1">
+            <a href="mailto:samiqaimkhani43@gmail.com" class="hover:text-yellow-300 transition-colors duration-300">
+              samiqaimkhani43@gmail.com
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scroll and active link highlight
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          window.scrollTo({
+            top: target.offsetTop - 60, // adjust for navbar height
+            behavior: 'smooth'
+          });
+        });
+      });
+
+      // Hamburger menu toggle
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+      hamburger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Highlight active nav link on scroll
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('.nav-link');
+      window.addEventListener('scroll', () => {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 80;
+          if (pageYOffset >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+        navLinks.forEach(link => {
+          link.classList.remove('active', 'underline');
+          if (link.getAttribute('href') === '#' + current) {
+            link.classList.add('active', 'underline');
+          }
+        });
+      });
+
+      document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const mailtoLink = `mailto:samiqaimkhani43@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+        window.location.href = mailtoLink;
+      });
+    </script>
+    <style>
+      /* Navbar link styles */
+      .nav-link {
+        position: relative;
+        transition: color 0.3s;
+        text-decoration: none;
+        padding-bottom: 4px; /* Space for the line */
+      }
+
+      /* Line that appears on hover and active state */
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #e76f51; /* Sunset color */
+        transition: width 0.3s ease;
+      }
+
+      /* Show line on hover */
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      /* Show line for active section */
+      .nav-link.active::after {
+        width: 100%;
+      }
+
+      .nav-link:hover {
+        color: #f4e2d8; /* Light sand color */
+      }
+
+      .nav-link.active {
+        color: #e76f51; /* Sunset color */
+      }
+
+      /* Gallery link styles */
+      .hover-effect {
+        text-decoration: none; /* This removes the default underline */
+        transition: transform 0.3s, box-shadow 0.3s;
+        cursor: pointer;
+      }
+      .hover-effect:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      }
+      .hover-effect img {
+        transition: transform 0.3s;
+      }
+      .hover-effect:hover img {
+        transform: scale(1.1);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Language Switcher Styles */
+      .language-switcher {
+        margin-left: 1rem;
+      }
+      
+      .language-switcher select {
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 0.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .language-switcher select:hover {
+        border-color: white;
+      }
+      
+      .language-switcher select option {
+        background-color: #e76f51;
+        color: white;
+      }
+
+      /* Google Translate Styles */
+      #google_translate_element {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1000;
+      }
+
+      .goog-te-gadget {
+        font-size: 0px !important;
+      }
+
+      .goog-te-gadget .goog-te-combo {
+        padding: 8px;
+        border-radius: 4px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .goog-te-gadget .goog-te-combo option {
+        background-color: #e76f51;
+        color: white;
+      }
+
+      /* Hide Google Translate attribution */
+      .goog-te-banner-frame {
+        display: none !important;
+      }
+
+      body {
+        top: 0 !important;
+      }
+
+      /* Mobile Responsive */
+      @media (max-width: 768px) {
+        #google_translate_element {
+          top: 4rem;
+          right: 1rem;
+        }
+      }
+    </style>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+          pageLanguage: 'en',
+          includedLanguages: 'en,ur,sd',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+      }
+
+      // Hide Google Translate attribution
+      const style = document.createElement('style');
+      style.innerHTML = `
+        .goog-logo-link {
+          display: none !important;
+        }
+        .goog-te-gadget {
+          color: transparent !important;
+        }
+        .goog-te-banner-frame {
+          display: none !important;
+        }
+        body {
+          top: 0 !important;
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+      // Language switcher functionality
+      document.getElementById('languageSelect').addEventListener('change', function() {
+        const lang = this.value;
+        const iframe = document.getElementsByClassName('goog-te-menu-frame')[0];
+        if (!iframe) return;
+        
+        const select = iframe.contentWindow.document.getElementsByTagName('select')[0];
+        if (select) {
+          select.value = lang;
+          select.dispatchEvent(new Event('change'));
+        }
+      });
+
+      // Hide Google Translate attribution
+      const style = document.createElement('style');
+      style.innerHTML = `
+        .goog-logo-link {
+          display: none !important;
+        }
+        .goog-te-gadget {
+          color: transparent !important;
+        }
+        .goog-te-banner-frame {
+          display: none !important;
+        }
+        body {
+          top: 0 !important;
+        }
+      `;
+      document.head.appendChild(style);
+    </script>
+
+    <script type="text/javascript">
+      function changeLanguage(lang) {
+        const iframe = document.getElementsByClassName('goog-te-menu-frame')[0];
+        if (!iframe) return;
+        
+        const select = iframe.contentWindow.document.getElementsByTagName('select')[0];
+        if (select) {
+          select.value = lang;
+          select.dispatchEvent(new Event('change'));
+        }
+      }
+    </script>
+  </body>
+</html>
